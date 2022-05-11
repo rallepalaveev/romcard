@@ -8,9 +8,8 @@ When writing to $C0Nx at the same time the ROM chip is also enabled
 When a bank is selected, its content are seen in the address space $C800-$CFFF
 To de-enable the ROM chips a write must be performed to address $CFFF or reset executed
 If a user program is accessing the card, it is important that at the end a write is performed to $CFFF so that the card is deactivated and does not conflict with other hardware, which is using the same address space.
-The bootloader is programmed in the lowest 256 bytes of the first ROM chip
-The boot loader is always available at addresses $CM00-$CMFF, where M = [slot number]
-The bootloader can also be seen at addresses $C800-$C8FF of bank #00
+The 256-byte bootloader is programmed in 2 separate 256x4 bit chips 83S129.
+The boot loader is available at addresses $CM00-$CMFF, where M = [slot number]
 Each program must be recorded in the ROM as follows:
 4 markers – #AA #D5 #55 #2A, always starting at an address $xxx00 – multiple of #100 
 16 bytes with the name of the program
