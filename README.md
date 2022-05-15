@@ -4,7 +4,7 @@ This is a project I created in 1995 - ROMcard, based on 8 x 27C512 EPROM chips -
 The ROMs are organized in 256 banks of 2kB each, numbered #00 to #FF
 Banks are selected by writing a byte (#00 - #FF) into $C0Nx, where N = 8 + [slot number]
 When writing to $C0Nx at the same time the ROM chip is also enabled
-When a bank is selected, its content are seen in the address space $C800-$CFFF
+When a bank is selected, its contents are seen in the address space $C800-$CFFF
 To de-enable the ROM chips a write must be performed to address $CFFF or reset executed
 If a user program is accessing the card, it is important that at the end a write is performed to $CFFF so that the card is deactivated and does not conflict with other hardware, which is using the same address space.
 The 256-byte bootloader is programmed in 2 separate 256x4 bit PROM chips 82S129.
@@ -21,9 +21,8 @@ If ”\” is pressed while performing a cold reset – the boot sequence will o
 Programs are called with “&” followed by the number of the program
 &2 calls the program which returns a list of programs recorded onto ROMcard2.
 10 Apr 2022 edit: added new firmware for ProDOS. Functions as a standard block device.
-www.clintech.net/romcard
 
-Copyright (c) 2021 Ralle Palaveev
+Copyright (c) 1995 Ralle Palaveev
 All rights reserved.
 
 Redistribution and use in source, binary, and manufactued forms, with or without
