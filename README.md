@@ -1,5 +1,5 @@
 # romcard
-A periferal card for Apple ][
+A peripheral card for Apple ][
 This is a project I created in 1995 - ROMcard, based on 8 x 27C512 EPROM chips - a total of 512kB. A photo of the original is posted.
 The ROMs are organized in 256 banks of 2kB each, numbered #00 to #FF
 Banks are selected by writing a byte (#00 - #FF) into $C0Nx, where N = 8 + [slot number]
@@ -25,7 +25,7 @@ Programs are called with “&” followed by the number of the program
 Copyright (c) 1995 Ralle Palaveev
 All rights reserved.
 
-Redistribution and use in source, binary, and manufactued forms, with or without
+Redistribution and use in source, binary, and manufactured forms, with or without
 modification, are permitted provided that the following conditions are met:
 1. Redistributions of source code and design files must retain the above copyright
    notice, this list of conditions and the following disclaimer.
