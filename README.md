@@ -10,17 +10,16 @@ If a user program is accessing the card, it is important that at the end a write
 The 256-byte bootloader is programmed in 2 separate 256x4 bit PROM chips 82S129.
 The boot loader is available at addresses $CM00-$CMFF, where M = [slot number]
 Each program must be recorded in the ROM as follows:
-4 markers – #AA #D5 #55 #2A, always starting at an address $xxx00 – multiple of #100 
-16 bytes with the name of the program
-2 bytes indicating the start address of the program
-2 bytes with the length of the program
-The actual binary code of the program
+* 4 markers – #AA #D5 #55 #2A, always starting at an address $xxx00 – multiple of #100 
+* 16 bytes with the name of the program
+* 2 bytes indicating the start address of the program
+* 2 bytes with the length of the program
+* The actual binary code of the program
 Recommended installation is on Slot 7.
 The boot loader has functionality that it captures the boot sequence of the computer and executes the first program recorded onto the ROM – usually DOS.
 If ”\” is pressed while performing a cold reset – the boot sequence will override the card boot so floppy disk can boot.
 Programs are called with “&” followed by the number of the program
 &2 calls the program which returns a list of programs recorded onto ROMcard.
-10 Apr 2022 edit: added new firmware for ProDOS. Functions as a standard block device.
 
 Copyright (c) 1995 Ralle Palaveev
 All rights reserved.
